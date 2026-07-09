@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Sign in — Electronic Accessories Website." />
+    <title>Electronic Accessories Website — Sign In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./static/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="./index.html" aria-label="Electronic Accessories Website home">
+          <span class="brand-mark" aria-hidden="true">
+            <img class="brand-logo" src="./static/img/Zee%20Solution%20Hub.png" alt="Zee Solution Hub" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">ELECTRONIC ACCESSORIES WEBSITE</span>
+            <span class="brand-tagline">Best quality in lower prices</span>
+          </span>
+        </a>
+        <div class="header-actions">
+          <a class="pill" href="https://wa.me/923265035398" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <span class="pill-title">WhatsApp</span>
+            <span class="pill-sub">+923265035398</span>
+          </a>
+          <a class="pill" href="tel:+923265035398" aria-label="Call +923265035398">
+            <span class="pill-title">Call</span>
+            <span class="pill-sub">+923265035398</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="main" style="max-width:860px;margin:24px auto;padding:0 18px;">
+      <div class="card">
+        <h1 style="margin:0;">Sign In</h1>
+        <p class="muted" style="margin-top:8px;">
+          This website uses a popup sign in. Please go back to <a class="link" href="./index.html">Home</a> and click the Sign In icon.
+        </p>
+        <button class="btn btn-primary" type="button" data-open-signin>Open Sign In</button>
+      </div>
+    </main>
+
+    <div class="modal" data-signin-modal aria-hidden="true">
+      <div class="modal-backdrop" data-close-signin></div>
+      <div class="modal-panel" role="dialog" aria-label="Sign in">
+        <div class="modal-head">
+          <div class="modal-title">Sign In</div>
+          <button class="icon-btn" type="button" aria-label="Close" data-close-signin>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="auth-tabs">
+          <button class="auth-tab is-active" type="button" data-auth-tab="login">Login</button>
+          <button class="auth-tab" type="button" data-auth-tab="register">Register</button>
+        </div>
+        <div data-auth-pane="login">
+          <form class="modal-form" data-signin-form>
+            <div class="field">
+              <label for="signinEmail">Phone Number or Email</label>
+              <input id="signinEmail" type="text" autocomplete="username" required />
+            </div>
+            <div class="field" style="margin-top:10px;">
+              <label for="signinPass">Password</label>
+              <input id="signinPass" type="password" autocomplete="current-password" required />
+            </div>
+            <button class="btn btn-primary" style="margin-top:14px;width:100%;" type="submit">Login</button>
+            <div class="auth-foot">
+              <span class="muted">New user?</span>
+              <button class="auth-link" type="button" data-switch-tab="register">Register here</button>
+            </div>
+            <div class="auth-social">
+              <button class="social-btn" type="button">Facebook</button>
+              <button class="social-btn" type="button">Google</button>
+            </div>
+          </form>
+        </div>
+        <div data-auth-pane="register" style="display:none;">
+          <form class="modal-form" data-register-form>
+            <div class="field">
+              <label for="regPhone">Phone Number</label>
+              <input id="regPhone" type="text" required />
+            </div>
+            <div class="field" style="margin-top:10px;">
+              <label for="regName">Full Name</label>
+              <input id="regName" type="text" required />
+            </div>
+            <div class="field" style="margin-top:10px;">
+              <label for="regPass">Password</label>
+              <input id="regPass" type="password" required />
+            </div>
+            <button class="btn btn-primary" style="margin-top:14px;width:100%;" type="submit">Create Account</button>
+            <div class="auth-foot">
+              <span class="muted">Already a member?</span>
+              <button class="auth-link" type="button" data-switch-tab="login">Login here</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" data-toast role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="./static/app.js" defer></script>
+  </body>
+</html>
+
